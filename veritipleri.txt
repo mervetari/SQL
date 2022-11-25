@@ -1,0 +1,41 @@
+PostgreSQL Veri Tipleri
+
+Boolean : Bu veri tipi True ve False işlemlerinde kullanılıyor.
+
+Karakter Türleri
+Bu türler metinsel ifadeleri saklayabilen türler. Bunlar;
+-Char : 1 byte veri saklamak için kullanılır.
+-Char(n) : n byte veri saklamak için kullanılır. Bu n ifadesi sabittir.
+-Varchar(n) : n byte’a kadar veri saklamak amacıyla kullanılır. 1 GB ile sınırlıdır.
+-Text : 1 GB’a kadar string saklamak amacıyla kullanılır.
+
+
+Sayısal Türler
+-smallint, int2 : 2 byte’lık integer veri saklamak amacıyla kullanılır.
+smallint ve int2 ifadeleri birbirinin alias’ı durumundadır.
+-integer, int4, int: 4 byte’lık integer veri saklamak amacıyla kullanılır.
+-bigint, int8 : 8 byte’lık integer veri saklamak amacıyla kullanılır.
+-Double precission : 8 byte alan kaplar. 15 ondalık basamaklı veri saklamak amacıyla kullanılır.
+-Reel : 4 byte alan kaplar. 6 ondalıklı basamaklı.
+- Numeric : 20 ondalık basamaklı saklamak için kullanılır.
+-Serial : 
+Aslında böyle bir veri tipi yoktur. Diğer database’lerde bulunan Auto Increment özelliğinin karşılığıdır.
+0’dan başlar. Tabloya bir veri girildiğinde bir artırılır, 1 olur.
+Serial int4 tipindedir Integer tiplerine göre smallserial, bigserial türleri de vardır.
+Serial’lar tablonun dışında ayrı bir nesne olarak saklanır. Sequance sayesinde bu yapı sağlanır.
+
+Range:
+Aynı kolon içersinde bir aralık tutabilmek amacıyla kullanılır. Arama sonuçlarını çok hızlı alabiliriz. Index’lenir. Alt ve üst değer olarak tanımlanır.
+
+Enum:
+Statik, sıralı veri kümeleri saklamak için kullanılır.
+
+Domain: 
+Validasyon yapmak amacıyla kullanılır.
+
+Date:
+Tarih tutmak amacıyla kullanılır. Varsayılan olarak Y/M/D formatındadır. Datestyle gösterim şekli değiştiribilir.
+
+Time
+Saat saklamak içindir.
+
